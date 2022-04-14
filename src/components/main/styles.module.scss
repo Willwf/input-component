@@ -11,3 +11,28 @@
   font-family: Poppins, sans-serif;
   font-weight: 500;
 }
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: 7vw;
+
+  
+  & div {
+    min-width: 12vw;
+
+    p {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.2rem;
+    margin-bottom: 1.6vh;
+    }
+  }
+}
+
+.states {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.2rem;
+  margin-bottom: 1.4vh;
+  color: #828282;
+  gap: 0;
+}
