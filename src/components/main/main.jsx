@@ -64,6 +64,17 @@ export function Main() {
           <Input helperText="Some interesting text" error />
         </div>
       </div>
+
+      <div className={styles.inputBox}>
+        <div>
+          <p className={styles.inputDescription}>&lt;Input startIcon /&gt;</p>
+          <Input startIcon="call" />
+        </div>
+        <div>
+          <p className={styles.inputDescription}>&lt;Input endIcon /&gt;</p>
+          <Input endIcon="lock" />
+        </div>
+      </div>
     </main>
   );
 }

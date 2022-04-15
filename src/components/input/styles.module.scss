@@ -12,13 +12,36 @@
   }
 }
 
+.inputWithRightIconDiv, .inputWithLeftIconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #828282;
+  border-radius: 0.8rem;
+
+  &::placeholder {
+    color: #828282;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  &:hover, &.hoverActive, &.errorHoverActive {
+    border: 1px solid #333333;
+  }
+  
+  &:focus-within, &.focusActive {
+    border: 1px solid #2962FF;
+  }
+}
+
+.inputWithLeftIconDiv {
+  padding-left: 1vw;
+}
+
 .label {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.2rem;
 
   color: #333333;
-
-  
 }
 
 .input {
@@ -37,11 +60,7 @@
     font-family: 'Noto Sans', sans-serif;
   }
 
-  &:hover, &.hoverActive {
-    border: 1px solid #333333;
-  }
-
-  &:hover, &.errorHoverActive {
+  &:hover, &.hoverActive, &.errorHoverActive {
     border: 1px solid #333333;
   }
   
@@ -59,6 +78,13 @@ input:disabled {
   }
 }
 
+.inputWithIcon {
+  height: 5vh;
+  margin-left: 0.1vw;
+  outline: none;
+  border: none;
+}
+
 .error {
   border: 1px solid #D32F2F;
 
@@ -72,4 +98,9 @@ input:disabled {
   color: #828282;
   font-family: 'Noto Sans', sans-serif;
   margin-top: 0.5vh;
+}
+
+.materialIcons {
+  font-size: 1.7rem;
+  margin: 0 .5rem;
 }

@@ -1,6 +1,70 @@
 import styles from "./styles.module.scss";
 
 export function Input(props) {
+  function inputWithIcon(props) {
+    if (props.startIcon) {
+      return (
+        <div className={styles.inputWithRightIconDiv}>
+          <span className={`material-icons ${styles.materialIcons}`}>
+            {props.startIcon}
+          </span>
+          <input
+            className={`
+        ${styles.inputWithIcon}
+        ${props.states ? styles[props.states] : ""}
+        ${props.error ? styles.error : ""}
+        `}
+            disabled={props.disabled ? "disabled" : ""}
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Placeholder"
+          />
+        </div>
+      );
+    }
+
+    if (props.endIcon) {
+      return (
+        <div className={styles.inputWithLeftIconDiv}>
+          <input
+            className={`
+        ${styles.inputWithIcon}
+        ${props.states ? styles[props.states] : ""}
+        ${props.error ? styles.error : ""}
+        `}
+            disabled={props.disabled ? "disabled" : ""}
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Placeholder"
+          />
+          <span className={`material-icons ${styles.materialIcons}`}>
+            {props.endIcon}
+          </span>
+        </div>
+      );
+    }
+
+    return (
+      <input
+        className={`
+        ${styles.input}
+        ${props.states ? styles[props.states] : ""}
+        ${props.error ? styles.error : ""}
+        `}
+        disabled={props.disabled ? "disabled" : ""}
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Placeholder"
+      />
+    );
+  }
+
   return (
     <div
       className={`
@@ -9,30 +73,20 @@ export function Input(props) {
       ${props.error ? styles.errorLabel : ""}
       `}
     >
-      <label className={styles.label} for="name">
+      <label className={styles.label} htmlFor="name">
         Label
       </label>
 
-      <input
-        className={`
-        ${styles.input}
-        ${props.states ? styles[props.states] : ""}
-        ${props.error ? styles.error : ""}
-        `}
-        type="text"
-        id="name"
-        name="name"
-        required
-        placeholder="Placeholder"
-        disabled={props.disabled ? "disabled" : ""}
-      ></input>
+      {inputWithIcon(props)}
+
       {props.helperText ? (
         <p className={styles.helperText}>{props.helperText}</p>
       ) : (
         ""
       )}
     </div>
-    // <button
+
+    //<button
     //   className={`
     //   ${styles.button}
     //   ${styles[props.variant]}
