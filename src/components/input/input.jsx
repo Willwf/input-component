@@ -26,6 +26,11 @@ export function Input(props) {
         placeholder="Placeholder"
         disabled={props.disabled ? "disabled" : ""}
       ></input>
+      {props.helperText ? (
+        <p className={styles.helperText}>{props.helperText}</p>
+      ) : (
+        ""
+      )}
     </div>
     // <button
     //   className={`

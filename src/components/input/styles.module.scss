@@ -3,11 +3,11 @@
     color: #2962FF;
   }
 
-  &.errorLabel label, &.errorFocusActive label {
+  &.errorLabel label, &.errorLabel p, &.errorFocusActive label {
     color: #D32F2F;
   }
 
-  &.errorLabel:hover label, &.errorHoverActive label {
+  &.errorLabel:hover label, &.errorLabel:hover p, &.errorHoverActive label {
     color: #333333;
   }
 }
@@ -65,4 +65,11 @@ input:disabled {
   &:focus, &.focusActive {
     border: 1px solid #D32F2F;
   }
+}
+
+.helperText {
+  font-size: 1rem;
+  color: #828282;
+  font-family: 'Noto Sans', sans-serif;
+  margin-top: 0.5vh;
 }
