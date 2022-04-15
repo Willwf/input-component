@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./styles.module.scss";
 
 export function Input(props) {
@@ -20,6 +21,7 @@ export function Input(props) {
             name="name"
             required
             placeholder="Placeholder"
+            defaultValue={props.value ? props.value : ""}
           />
         </div>
       );
@@ -40,6 +42,7 @@ export function Input(props) {
             name="name"
             required
             placeholder="Placeholder"
+            defaultValue={props.value ? props.value : ""}
           />
           <span className={`material-icons ${styles.materialIcons}`}>
             {props.endIcon}
@@ -61,6 +64,7 @@ export function Input(props) {
         name="name"
         required
         placeholder="Placeholder"
+        defaultValue={props.value ? props.value : ""}
       />
     );
   }

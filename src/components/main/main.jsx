@@ -75,6 +75,15 @@ export function Main() {
           <Input endIcon="lock" />
         </div>
       </div>
+
+      <div className={styles.inputBox}>
+        <div>
+          <p className={styles.inputDescription}>
+            &lt;Input value="Text" /&gt;
+          </p>
+          <Input value="Text" />
+        </div>
+      </div>
     </main>
   );
 }
