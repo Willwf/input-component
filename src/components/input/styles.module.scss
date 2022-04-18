@@ -47,7 +47,7 @@
 .input {
   display: flex;
 
-  height: 5vh;
+  height: 5.8vh;
   border: 1px solid #828282;
   padding: 0 1vw;
 
@@ -79,7 +79,7 @@ input:disabled {
 }
 
 .inputWithIcon {
-  height: 5vh;
+  height: 5.8vh;
   margin-left: 0.1vw;
   outline: none;
   border: none;
@@ -103,4 +103,12 @@ input:disabled {
 .materialIcons {
   font-size: 1.7rem;
   margin: 0 .5rem;
+}
+
+.sm {
+  height: 4.5vh;
+}
+
+.md {
+  height: 5.8vh;
 }

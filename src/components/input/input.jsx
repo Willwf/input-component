@@ -14,6 +14,7 @@ export function Input(props) {
         ${styles.inputWithIcon}
         ${props.states ? styles[props.states] : ""}
         ${props.error ? styles.error : ""}
+        ${props.size ? styles[props.size] : ""}
         `}
             disabled={props.disabled ? "disabled" : ""}
             type="text"
@@ -35,6 +36,7 @@ export function Input(props) {
         ${styles.inputWithIcon}
         ${props.states ? styles[props.states] : ""}
         ${props.error ? styles.error : ""}
+        ${props.size ? styles[props.size] : ""}
         `}
             disabled={props.disabled ? "disabled" : ""}
             type="text"
@@ -57,6 +59,7 @@ export function Input(props) {
         ${styles.input}
         ${props.states ? styles[props.states] : ""}
         ${props.error ? styles.error : ""}
+        ${props.size ? styles[props.size] : ""}
         `}
         disabled={props.disabled ? "disabled" : ""}
         type="text"

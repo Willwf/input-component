@@ -84,6 +84,17 @@ export function Main() {
           <Input value="Text" />
         </div>
       </div>
+
+      <div className={styles.inputBox}>
+        <div>
+          <p className={styles.inputDescription}>&lt;Input size=”sm” /&gt;</p>
+          <Input size="sm" />
+        </div>
+        <div>
+          <p className={styles.inputDescription}>&lt;Input size="md" &gt;</p>
+          <Input size="md" />
+        </div>
+      </div>
     </main>
   );
 }
