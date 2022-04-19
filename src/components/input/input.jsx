@@ -15,6 +15,7 @@ export function Input(props) {
         ${props.states ? styles[props.states] : ""}
         ${props.error ? styles.error : ""}
         ${props.size ? styles[props.size] : ""}
+        ${props.fullWidth ? styles.fullWidth : ""}}
         `}
             disabled={props.disabled ? "disabled" : ""}
             type="text"
@@ -37,6 +38,7 @@ export function Input(props) {
         ${props.states ? styles[props.states] : ""}
         ${props.error ? styles.error : ""}
         ${props.size ? styles[props.size] : ""}
+        ${props.fullWidth ? styles.fullWidth : ""}}
         `}
             disabled={props.disabled ? "disabled" : ""}
             type="text"
@@ -60,6 +62,7 @@ export function Input(props) {
         ${props.states ? styles[props.states] : ""}
         ${props.error ? styles.error : ""}
         ${props.size ? styles[props.size] : ""}
+        ${props.fullWidth ? styles.fullWidth : ""}
         `}
         disabled={props.disabled ? "disabled" : ""}
         type="text"
@@ -92,28 +95,5 @@ export function Input(props) {
         ""
       )}
     </div>
-
-    //<button
-    //   className={`
-    //   ${styles.button}
-    //   ${styles[props.variant]}
-    //   ${styles[props.states]}
-    //   ${props.disableShadow ? styles.disableShadow : undefined}
-    //   ${styles[props.size]}
-    //   ${styles[props.color]}`}
-    //   disabled={props.disabled ? "disabled" : ""}
-    // >
-    //   {props.startIcon ? (
-    //     <span className={`material-icons ${styles.materialIcons}`}>
-    //       {props.startIcon}
-    //     </span>
-    //   ) : undefined}
-    //   {props.children ? props.children : "Default"}
-    //   {props.endIcon ? (
-    //     <span className={`material-icons ${styles.materialIcons}`}>
-    //       {props.endIcon}
-    //     </span>
-    //   ) : undefined}
-    // </button>
   );
 }

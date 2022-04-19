@@ -95,6 +95,13 @@ export function Main() {
           <Input size="md" />
         </div>
       </div>
+
+      <div className={styles.inputBox}>
+        <div>
+          <p className={styles.inputDescription}>&lt;Input fullWidth /&gt;</p>
+          <Input fullWidth />
+        </div>
+      </div>
     </main>
   );
 }
