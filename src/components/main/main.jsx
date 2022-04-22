@@ -111,6 +111,12 @@ export function Main() {
           <Input multiline row="4" />
         </div>
       </div>
+
+      <p className={styles.copyright}>
+        Created by{" "}
+        <a href="https://devchallenges.io/portfolio/Willwf">willwf</a> -
+        devChallenges.io
+      </p>
     </main>
   );
 }
