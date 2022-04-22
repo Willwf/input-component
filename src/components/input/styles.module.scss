@@ -85,6 +85,33 @@ input:disabled {
   border: none;
 }
 
+.textarea {
+  display: flex;
+
+  line-height: 3rem;
+  resize: none;
+
+  border: 1px solid #828282;
+  padding: 0 1vw;
+
+  border-radius: 0.8rem;
+
+  outline: none;
+
+  &::placeholder {
+    color: #828282;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  &:hover, &.hoverActive, &.errorHoverActive {
+    border: 1px solid #333333;
+  }
+  
+  &:focus, &.focusActive {
+    border: 1px solid #2962FF;
+  }
+}
+
 .error {
   border: 1px solid #D32F2F;
 

@@ -102,6 +102,15 @@ export function Main() {
           <Input fullWidth />
         </div>
       </div>
+
+      <div className={styles.inputBox}>
+        <div>
+          <p className={styles.inputDescription}>
+            &lt;Input multiline row="4" /&gt;
+          </p>
+          <Input multiline row="4" />
+        </div>
+      </div>
     </main>
   );
 }

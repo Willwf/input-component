@@ -75,6 +75,29 @@ export function Input(props) {
     );
   }
 
+  function createTextArea(props) {
+    console.log(props.row);
+    return (
+      <textarea
+        className={`
+        ${styles.textarea}
+        ${props.states ? styles[props.states] : ""}
+        ${props.error ? styles.error : ""}
+        ${props.size ? styles[props.size] : ""}
+        ${props.fullWidth ? styles.fullWidth : ""}
+        `}
+        disabled={props.disabled ? "disabled" : ""}
+        rows={props.row}
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Placeholder"
+        defaultValue={props.value ? props.value : ""}
+      ></textarea>
+    );
+  }
+
   return (
     <div
       className={`
@@ -87,7 +110,7 @@ export function Input(props) {
         Label
       </label>
 
-      {inputWithIcon(props)}
+      {props.multiline ? createTextArea(props) : inputWithIcon(props)}
 
       {props.helperText ? (
         <p className={styles.helperText}>{props.helperText}</p>
